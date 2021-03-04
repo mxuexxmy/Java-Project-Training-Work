@@ -13,7 +13,7 @@
 
 #### 遇到问题及解决方案
 
-* git 遇到同步问题：`OpenSSL SSL_read: Connection was reset, errno 10054`
+* git 遇到同步问题：`OpenSSL SSL_read: Connection was reset, errno 10054` and `Failed to connect to github.com port 443: Timed out`
 
   在仓库的git下输入`git config --global http.sslVerify "false"`
 

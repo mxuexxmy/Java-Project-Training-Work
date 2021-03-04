@@ -3,6 +3,7 @@
 小马哥的 Java 项目实战营作业集提交仓库
 
 ## 作业一
+> 作业地址：week-1/my-user-platform
 
 要求：
 

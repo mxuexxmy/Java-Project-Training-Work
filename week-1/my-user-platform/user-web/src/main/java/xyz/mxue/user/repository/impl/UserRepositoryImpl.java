@@ -5,9 +5,7 @@ import xyz.mxue.user.repository.DatabaseUserRepository;
 import xyz.mxue.user.repository.UserRepository;
 import xyz.mxue.user.sql.DBConnectionManager;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Collection;
 
 /**
@@ -21,7 +19,18 @@ public class UserRepositoryImpl implements UserRepository {
         Connection connection = null;
         PreparedStatement statement = null;
         try {
-         connection = null;
+            String databaseURL = "jdbc:derby:/db/my-user-platform;create=true";
+            connection = DriverManager.getConnection(databaseURL);
+            statement = connection.prepareStatement(DBConnectionManager.INSERT_ONE_USER_INFO);
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getPassword());
+            statement.setString(3, user.getEmail());
+            statement.setString(4, user.getPhoneNumber());
+            int row = statement.executeUpdate();
+            if (row > 0) {
+                return true;
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -61,11 +70,89 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User getByNameAndPassword(String userName, String password) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            String databaseURL = "jdbc:derby:/db/my-user-platform;create=true";
+            connection = DriverManager.getConnection(databaseURL);
+            statement = connection.prepareStatement(DBConnectionManager.QUERY_ONE_USER_INFO);
+            statement.setString(1, userName);
+            statement.setString(2, password);
+            ResultSet resultSet = statement.executeQuery();
+            User user = new User();
+            while (resultSet.next()) {
+                user.setId(resultSet.getLong("id"));
+                user.setName(resultSet.getString("name"));
+                user.setPassword(resultSet.getString("password"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPhoneNumber(resultSet.getString("phoneNumber"));
+            }
+            return user;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         return null;
     }
 
     @Override
     public Collection<User> getAll() {
+        return null;
+    }
+
+    @Override
+    public User getByName(String name) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        try {
+            String databaseURL = "jdbc:derby:/db/my-user-platform;create=true";
+            connection = DriverManager.getConnection(databaseURL);
+            statement = connection.prepareStatement(DBConnectionManager.QUERY_USER_INFO_BY_NAME);
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            User user = new User();
+            while (resultSet.next()) {
+                user.setId(resultSet.getLong("id"));
+                user.setName(resultSet.getString("name"));
+                user.setPassword(resultSet.getString("password"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPhoneNumber(resultSet.getString("phoneNumber"));
+            }
+            return user;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
         return null;
     }
 }

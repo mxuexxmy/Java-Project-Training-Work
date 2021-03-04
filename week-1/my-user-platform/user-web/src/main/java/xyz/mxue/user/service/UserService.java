@@ -47,10 +47,19 @@ public interface UserService {
     /**
      * 通过姓名和密码查询用户信息
      *
-     * @param name 姓名
+     * @param name 用户名
      * @param password 密码
      * @return User
      * @author mxuexxmy
      */
     User queryUserByNameAndPassword(String name, String password);
+
+    /**
+     * 通过姓名查询用户信息
+     *
+     * @param name 用户名
+     * @return User
+     * @author mxuexxmy
+     */
+    User queryUserByName(String name);
 }

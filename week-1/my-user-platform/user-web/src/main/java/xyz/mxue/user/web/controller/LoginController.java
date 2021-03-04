@@ -1,10 +1,13 @@
 package xyz.mxue.user.web.controller;
 
-import xyz.mxue.web.mvc.controller.Controller;
+import xyz.mxue.user.domain.User;
+import xyz.mxue.user.service.UserService;
+import xyz.mxue.user.service.impl.UserServiceImpl;
 import xyz.mxue.web.mvc.controller.PageController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
@@ -15,9 +18,23 @@ import javax.ws.rs.Path;
 @Path("/login")
 public class LoginController implements PageController {
 
-    @POST
+    @GET
+    @Path("/page")
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-        return "main.jsp";
+        return "login-form.jsp";
+    }
+
+    @POST
+    @Path("/main")
+    public String login(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+        UserService userService = new UserServiceImpl();
+        String name = request.getParameter("name");
+        String password = request.getParameter("password");
+        User user = userService.queryUserByNameAndPassword(name, password);
+        if (user != null) {
+            return "main.jsp";
+        }
+       return "login-form.jsp";
     }
 }

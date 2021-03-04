@@ -13,6 +13,6 @@
 <body>
 <div class="container-lg">
     <!-- Content here -->
-    Login success page
+
 </div>
 </body>

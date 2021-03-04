@@ -104,6 +104,11 @@ public class DatabaseUserRepository implements UserRepository{
         });
     }
 
+    @Override
+    public User getByName(String name) {
+        return null;
+    }
+
     /**
      * @param sql
      * @param function

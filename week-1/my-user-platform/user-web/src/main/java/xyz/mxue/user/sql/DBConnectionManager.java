@@ -44,4 +44,11 @@ public class DBConnectionManager {
             "('C','******','c@gmail.com','3') , " +
             "('D','******','d@gmail.com','4') , " +
             "('E','******','e@gmail.com','5')";
+
+
+    public static final String INSERT_ONE_USER_INFO = "INSERT INTO users(name,password,email,phoneNumber) VALUES (?, ?, ?, ?)";
+
+    public static final String QUERY_ONE_USER_INFO = "SELECT * FORM users WHERE name = ? and password = ?";
+
+    public static final String QUERY_USER_INFO_BY_NAME = "SELECT * FORM users WHERE name = ?";
 }

@@ -13,6 +13,6 @@
 <body>
 <div class="container-lg">
     <!-- Content here -->
-    User register success page
+    User regist`er success page
 </div>
 </body>

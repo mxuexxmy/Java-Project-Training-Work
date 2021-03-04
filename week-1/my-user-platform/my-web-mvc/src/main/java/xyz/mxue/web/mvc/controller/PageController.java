@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 public interface PageController extends Controller{
 
     /**
-     * 功能描述:
      *
      * @param request HTTP 请求
      * @param response HTTP 响应

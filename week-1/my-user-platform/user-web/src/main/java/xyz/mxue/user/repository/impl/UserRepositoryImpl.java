@@ -10,7 +10,6 @@ import java.util.Collection;
 
 /**
  * @author mxuexxmy
- * @date 3/3/2021$ 10:31 PM$
  */
 public class UserRepositoryImpl implements UserRepository {
 

@@ -11,3 +11,16 @@
 - 通过 Controller -> Service -> Repository 实现（数据库实现）
 - （非必须）JNDI 的方式获取数据库源（DataSource），在获取 Connection
 
+#### 遇到问题及解决方案
+
+* git 遇到同步问题：
+
+  在仓库的git下输入git config --global http.sslVerify "false"
+
+* 项目打包及运行
+
+  * 打包 
+    * 在项目的文件夹下
+    * 输入命令：mvn clean package -U
+    * 输入运行 jar 命令：java -jar ***.jar
+

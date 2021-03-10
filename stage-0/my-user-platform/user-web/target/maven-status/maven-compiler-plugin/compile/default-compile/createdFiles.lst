@@ -1,0 +1,15 @@
+xyz\mxue\user\repository\InMemoryUserRepository.class
+xyz\mxue\user\service\impl\UserServiceImpl.class
+xyz\mxue\user\sql\DBConnectionManager.class
+xyz\mxue\user\repository\UserRepository.class
+xyz\mxue\user\repository\DatabaseUserRepository.class
+xyz\mxue\user\web\controller\TestController.class
+xyz\mxue\user\service\UserService.class
+xyz\mxue\user\web\controller\LoginController.class
+xyz\mxue\function\ThrowableFunction.class
+xyz\mxue\user\web\controller\RegisterController.class
+xyz\mxue\user\web\listener\DBConnectionInitializerListener.class
+xyz\mxue\user\domain\User.class
+xyz\mxue\user\web\filter\CharsetEncodingFilter.class
+xyz\mxue\user\repository\impl\UserRepositoryImpl.class
+xyz\mxue\user\web\controller\HelloWorldController.class

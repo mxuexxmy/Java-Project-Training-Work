@@ -4,6 +4,8 @@
 
 ## 作业一
 > 作业地址：week-1/my-user-platform
+>
+>  最新作业地址：stage-0/my-user-platform     
 
 要求：
 
@@ -16,7 +18,7 @@
 > 作业地址：week-1/my-user-platform
 >
 > * 参考 小马哥的 仓库，及 stage 为阶段，所以 week-1 更改为 stage-0。
-> * 采用分支或者 tag 作为作业标识。
+> * 采用分支作为作业标识。
 
 要求：
 

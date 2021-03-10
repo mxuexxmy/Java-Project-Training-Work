@@ -8,6 +8,8 @@
 >  最新作业地址：stage-0/my-user-platform     
 >
 >  分支：week-1
+>
+>   作业链接：https://github.com/mxuexxmy/java-project-training-work/tree/week-1
 
 要求：
 
@@ -22,6 +24,8 @@
 > * 参考 小马哥的 仓库，及 stage 为阶段，所以 week-1 更改为 stage-0。
 > * 采用分支作为作业标识。
 > * week-2
+>
+>   作业链接：https://github.com/mxuexxmy/java-project-training-work/tree/week-2
 
 要求：
 

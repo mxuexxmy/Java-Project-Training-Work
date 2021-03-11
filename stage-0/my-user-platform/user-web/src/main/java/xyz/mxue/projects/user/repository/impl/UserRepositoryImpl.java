@@ -1,9 +1,8 @@
-package xyz.mxue.user.repository.impl;
+package xyz.mxue.projects.user.repository.impl;
 
-import xyz.mxue.user.domain.User;
-import xyz.mxue.user.repository.DatabaseUserRepository;
-import xyz.mxue.user.repository.UserRepository;
-import xyz.mxue.user.sql.DBConnectionManager;
+import xyz.mxue.projects.user.domain.User;
+import xyz.mxue.projects.user.repository.UserRepository;
+import xyz.mxue.projects.user.sql.DBConnectionManager;
 
 import java.sql.*;
 import java.util.Collection;

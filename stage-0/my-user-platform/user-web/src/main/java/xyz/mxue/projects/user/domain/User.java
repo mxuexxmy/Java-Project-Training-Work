@@ -1,4 +1,4 @@
-package xyz.mxue.user.domain;
+package xyz.mxue.projects.user.domain;
 
 import java.util.Objects;
 

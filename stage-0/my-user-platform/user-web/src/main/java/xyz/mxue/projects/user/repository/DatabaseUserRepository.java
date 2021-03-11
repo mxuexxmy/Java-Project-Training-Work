@@ -1,8 +1,8 @@
-package xyz.mxue.user.repository;
+package xyz.mxue.projects.user.repository;
 
 import xyz.mxue.function.ThrowableFunction;
-import xyz.mxue.user.domain.User;
-import xyz.mxue.user.sql.DBConnectionManager;
+import xyz.mxue.projects.user.domain.User;
+import xyz.mxue.projects.user.sql.DBConnectionManager;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;

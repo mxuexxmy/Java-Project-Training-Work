@@ -50,3 +50,17 @@
   * 输入命令：`mvn clean package -U`
   * 输入运行 jar 命令：`java -jar ***.jar`
 
+### 项目依赖包没有依赖，没有报错
+
+结果对比排除，找到的原因是，父级项目（root）少了依赖包:
+
+```
+<dependency>
+    <groupId>commons-validator</groupId>
+    <artifactId>commons-validator</artifactId>
+    <version>${commons-validator.version}</version>
+</dependency>
+```
+
+
+

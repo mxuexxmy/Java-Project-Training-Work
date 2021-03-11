@@ -1,22 +1,47 @@
 package xyz.mxue.projects.user.domain;
 
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.util.Objects;
+
+import static javax.persistence.GenerationType.AUTO;
 
 /**
  * @author mxuexxmy
  * 用户领域对象
  * @since 1.0
  */
+@Entity
+@Table(name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = AUTO)
+    @NotNull
     private Long id;
 
+    @Column
     private String name;
 
+    /**
+     * 密码：6-32 位
+     */
+    @Column
+    @Max(32)
+    @Min(6)
     private String password;
 
+    @Column
     private String email;
 
+    /**
+     * 电话号码:采用中国大陆的方式（11位检验）
+     */
+    @Column
+    @Pattern(regexp = "^(\\+?0?86\\-?)?1[3-9]\\d{9}$")
     private String phoneNumber;
 
     public Long getId() {

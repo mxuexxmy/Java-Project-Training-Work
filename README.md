@@ -4,6 +4,12 @@
 
 ## 作业一
 > 作业地址：week-1/my-user-platform
+>
+>  最新作业地址：stage-0/my-user-platform     
+>
+>  分支：week-1
+>
+>   作业链接：https://github.com/mxuexxmy/java-project-training-work/tree/week-1
 
 要求：
 
@@ -13,10 +19,13 @@
 
 ## 作业二
 
-> 作业地址：week-1/my-user-platform
+> 作业地址：stage-0/my-user-platform
 >
 > * 参考 小马哥的 仓库，及 stage 为阶段，所以 week-1 更改为 stage-0。
-> * 采用分支或者 tag 作为作业标识。
+> * 采用分支作为作业标识。
+> * week-2
+>
+>   作业链接：https://github.com/mxuexxmy/java-project-training-work/tree/week-2
 
 要求：
 
@@ -40,4 +49,18 @@
   * 在项目的文件夹下
   * 输入命令：`mvn clean package -U`
   * 输入运行 jar 命令：`java -jar ***.jar`
+
+### 项目依赖包没有依赖，没有报错
+
+结果对比排除，找到的原因是，父级项目（root）少了依赖包:
+
+```
+<dependency>
+    <groupId>commons-validator</groupId>
+    <artifactId>commons-validator</artifactId>
+    <version>${commons-validator.version}</version>
+</dependency>
+```
+
+
 

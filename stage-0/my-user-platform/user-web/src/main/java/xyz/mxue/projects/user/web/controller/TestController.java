@@ -1,4 +1,4 @@
-package xyz.mxue.user.web.controller;
+package xyz.mxue.projects.user.web.controller;
 
 import xyz.mxue.web.mvc.controller.PageController;
 

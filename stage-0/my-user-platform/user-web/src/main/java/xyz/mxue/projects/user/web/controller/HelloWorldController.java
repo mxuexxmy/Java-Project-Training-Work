@@ -1,11 +1,10 @@
-package xyz.mxue.user.web.controller;
+package xyz.mxue.projects.user.web.controller;
 
 import xyz.mxue.web.mvc.controller.PageController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
 /**

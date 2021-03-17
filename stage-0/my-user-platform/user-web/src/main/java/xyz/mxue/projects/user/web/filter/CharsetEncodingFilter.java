@@ -1,4 +1,4 @@
-package xyz.mxue.user.web.filter;
+package xyz.mxue.projects.user.web.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

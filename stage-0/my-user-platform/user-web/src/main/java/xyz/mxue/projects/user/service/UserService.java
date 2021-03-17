@@ -1,6 +1,6 @@
-package xyz.mxue.user.service;
+package xyz.mxue.projects.user.service;
 
-import xyz.mxue.user.domain.User;
+import xyz.mxue.projects.user.domain.User;
 
 /**
  * @author mxuexxmy

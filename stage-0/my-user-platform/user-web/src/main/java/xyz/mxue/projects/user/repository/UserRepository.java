@@ -1,6 +1,6 @@
-package xyz.mxue.user.repository;
+package xyz.mxue.projects.user.repository;
 
-import xyz.mxue.user.domain.User;
+import xyz.mxue.projects.user.domain.User;
 
 import java.util.Collection;
 

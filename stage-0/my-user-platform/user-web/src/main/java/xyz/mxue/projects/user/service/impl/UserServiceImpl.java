@@ -1,9 +1,9 @@
-package xyz.mxue.user.service.impl;
+package xyz.mxue.projects.user.service.impl;
 
-import xyz.mxue.user.domain.User;
-import xyz.mxue.user.repository.UserRepository;
-import xyz.mxue.user.repository.impl.UserRepositoryImpl;
-import xyz.mxue.user.service.UserService;
+import xyz.mxue.projects.user.domain.User;
+import xyz.mxue.projects.user.repository.UserRepository;
+import xyz.mxue.projects.user.repository.impl.UserRepositoryImpl;
+import xyz.mxue.projects.user.service.UserService;
 
 /**
  * @author mxuexxmy

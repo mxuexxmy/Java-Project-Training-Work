@@ -1,4 +1,4 @@
-package xyz.mxue.user.sql;
+package xyz.mxue.projects.user.sql;
 
 import java.sql.Connection;
 import java.sql.SQLException;

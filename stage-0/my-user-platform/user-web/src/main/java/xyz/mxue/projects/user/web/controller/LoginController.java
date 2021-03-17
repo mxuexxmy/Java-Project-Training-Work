@@ -1,8 +1,8 @@
-package xyz.mxue.user.web.controller;
+package xyz.mxue.projects.user.web.controller;
 
-import xyz.mxue.user.domain.User;
-import xyz.mxue.user.service.UserService;
-import xyz.mxue.user.service.impl.UserServiceImpl;
+import xyz.mxue.projects.user.domain.User;
+import xyz.mxue.projects.user.service.UserService;
+import xyz.mxue.projects.user.service.impl.UserServiceImpl;
 import xyz.mxue.web.mvc.controller.PageController;
 
 import javax.servlet.http.HttpServletRequest;

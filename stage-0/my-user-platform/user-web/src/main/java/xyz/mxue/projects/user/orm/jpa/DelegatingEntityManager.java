@@ -209,97 +209,97 @@ public class DelegatingEntityManager implements EntityManager {
 
     @Override
     public Query createNamedQuery(String s) {
-        return null;
+        return entityManager.createNamedQuery(s);
     }
 
     @Override
     public <T> TypedQuery<T> createNamedQuery(String s, Class<T> aClass) {
-        return null;
+        return entityManager.createNamedQuery(s, aClass);
     }
 
     @Override
     public Query createNativeQuery(String s) {
-        return null;
+        return entityManager.createNativeQuery(s);
     }
 
     @Override
     public Query createNativeQuery(String s, Class aClass) {
-        return null;
+        return entityManager.createNativeQuery(s, aClass);
     }
 
     @Override
     public Query createNativeQuery(String s, String s1) {
-        return null;
+        return entityManager.createNativeQuery(s, s1);
     }
 
     @Override
     public StoredProcedureQuery createNamedStoredProcedureQuery(String s) {
-        return null;
+        return entityManager.createStoredProcedureQuery(s);
     }
 
     @Override
     public StoredProcedureQuery createStoredProcedureQuery(String s) {
-        return null;
+        return entityManager.createStoredProcedureQuery(s);
     }
 
     @Override
     public StoredProcedureQuery createStoredProcedureQuery(String s, Class... classes) {
-        return null;
+        return entityManager.createStoredProcedureQuery(s, classes);
     }
 
     @Override
     public StoredProcedureQuery createStoredProcedureQuery(String s, String... strings) {
-        return null;
+        return entityManager.createStoredProcedureQuery(s, strings);
     }
 
     @Override
     public void joinTransaction() {
-
+          entityManager.joinTransaction();
     }
 
     @Override
     public boolean isJoinedToTransaction() {
-        return false;
+        return entityManager.isJoinedToTransaction();
     }
 
     @Override
     public <T> T unwrap(Class<T> aClass) {
-        return null;
+        return entityManager.unwrap(aClass);
     }
 
     @Override
     public Object getDelegate() {
-        return null;
+        return entityManager.getDelegate();
     }
 
     @Override
     public void close() {
-
+        entityManager.close();
     }
 
     @Override
     public boolean isOpen() {
-        return false;
+        return entityManager.isOpen();
     }
 
     @Override
     public EntityTransaction getTransaction() {
-        return null;
+        return entityManager.getTransaction();
     }
 
     @Override
     public EntityManagerFactory getEntityManagerFactory() {
-        return null;
+        return entityManager.getEntityManagerFactory();
     }
 
     @Override
     public CriteriaBuilder getCriteriaBuilder() {
-        return null;
+        return entityManager.getCriteriaBuilder();
     }
 
     @Override
     public Metamodel getMetamodel() {
-        return null;
+        return entityManager.getMetamodel();
     }
 
     @Override

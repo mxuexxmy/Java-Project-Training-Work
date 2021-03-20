@@ -60,27 +60,6 @@ public class Converters implements Iterable<Converter>{
         this.classLoader = classLoader;
     }
 
-    private Class<?> resolveConvertedType(Class<?> converterClass) {
-        Class<?> convertedType = null;
-
-        for (Type superInterface : converterClass.getGenericInterfaces()) {
-            convertedType = resolveConvertedType(superInterface);
-            if (convertedType != null) {
-                break;
-            }
-        }
-
-        return convertedType;
-    }
-
-    public void addConverters(Converter... converters) {
-        addConverters(Arrays.asList(converters));
-    }
-
-    public void setClassLoader(ClassLoader classLoader) {
-        this.classLoader = classLoader;
-    }
-
     protected Class<?> resolveConvertedType(Converter<?> converter) {
         assertConverter(converter);
         Class<?> convertedType = null;
@@ -118,6 +97,19 @@ public class Converters implements Iterable<Converter>{
     }
 
 
+    private Class<?> resolveConvertedType(Class<?> converterClass) {
+        Class<?> convertedType = null;
+
+        for (Type superInterface : converterClass.getGenericInterfaces()) {
+            convertedType = resolveConvertedType(superInterface);
+            if (convertedType != null) {
+                break;
+            }
+        }
+
+        return convertedType;
+    }
+
     private Class<?> resolveConvertedType(Type type) {
         Class<?> convertedType = null;
         if (type instanceof ParameterizedType) {
@@ -135,6 +127,10 @@ public class Converters implements Iterable<Converter>{
         return convertedType;
     }
 
+    public void addConverters(Converter... converters) {
+        addConverters(Arrays.asList(converters));
+    }
+
     public List<Converter> getConverters(Class<?> convertedType) {
         PriorityQueue<PrioritizedConverter> prioritizedConverters = typedConverters.get(convertedType);
         if (prioritizedConverters == null || prioritizedConverters.isEmpty()) {
@@ -150,12 +146,11 @@ public class Converters implements Iterable<Converter>{
     @Override
     public Iterator<Converter> iterator() {
         List<Converter> allConverters = new LinkedList<>();
-        for (PriorityQueue<PrioritizedConverter> converters : typedConverters.values()){
+        for (PriorityQueue<PrioritizedConverter> converters : typedConverters.values()) {
             for (PrioritizedConverter converter : converters) {
-                allConverters.add(converter.getConverter()) ;
+                allConverters.add(converter.getConverter());
             }
         }
         return allConverters.iterator();
     }
-
 }

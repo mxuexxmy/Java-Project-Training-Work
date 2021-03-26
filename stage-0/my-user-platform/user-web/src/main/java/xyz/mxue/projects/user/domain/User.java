@@ -41,7 +41,7 @@ public class User {
      * 电话号码:采用中国大陆的方式（11位检验）
      */
     @Column
-    @Pattern(regexp = "^(\\+?0?86\\-?)?1[3-9]\\d{9}$")
+    @Pattern(regexp = "/^1[3-9]\\d{9}$/")
     private String phoneNumber;
 
     public Long getId() {

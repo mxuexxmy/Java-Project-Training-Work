@@ -35,6 +35,21 @@
 * 密码：6-32 位
 * 电话号码:采用中国大陆的方式（11位检验）
 
+## 作业三
+
+需求一（必须）
+
+* 整合 https://jolokia.org
+* 实现一个自定义 JMX MBean，通过 Jolokia 做 Servlet 代理
+
+需求二（选做）
+
+* 继续完成 Microprofile config API 中的实现
+  * 扩展 `org.eclipse.microprofile.config.spi.ConfigSource` 实现，包括 OS 环境变量，以及本地配置文件
+  *  扩展 `org.eclipse.microptofile.config.spi.Converter` 实现提供 `String` 类型的到简单类型
+*  通过 `org.eclipse.microprofile,config.Config` 读取当前应用配置名称
+  * 应用名称 `property name = "application.name"`
+
 ## 遇到问题及解决方案
 
 ### git 遇到同步问题
@@ -62,5 +77,16 @@
 </dependency>
 ```
 
+### 解决`maven-source-plugin:3.2.1 not found`
 
+由 mybatis 插件引起的
 
+解决方案： 
+
+在出现问题的地方，点击小红点：
+
+* 选择`inspection‘Mapper xml inspection’ option` 选项。
+* 选择`Edit inspection profile setting`
+* 去掉Mybatis 插件报红的选项，如
+  * `Mapper method inspection`
+  * `Mapper xml inspection`
